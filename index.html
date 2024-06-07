@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munfirm - Agriculture & Organic Food React NextJS Template</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css.map">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/img/logo/lfavicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="hidden">
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2">
+        <div class="ball"></div>
+    </div>
+    <div class='cursor3' id="cursor3"></div>
+    <!-- loader -->
+    <div class="loader">
+        <img src="./assets/img/logo/logo.png" alt="">
+    </div>
+    <header class="header" style="background-color: #F3F3F3;">
+        <nav class="navbar navbar-expand-lg"
+            style="top: 0; width: 100%; z-index: 2; border-bottom: 1px solid rgba(118, 167, 19, 0.15);">
+            <div class="container-fluid px-5 py-3" style="margin: 0px 50px;">
+                <div class="logo">
+                    <img src="assets/img/logo/logo.png" alt="">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 fw-semibold " style="font-size: 17px; margin-left: 120px;">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active d-hover" class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 dropdown   ">
+                            <a class="nav-link active d-hover" class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">pages<i
+                                    class="bi bi-caret-down-fill" style="font-size: 14px; margin-left: 10px ;"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-color: #ffffff; border: none; border-radius: 0px; min-width: 235px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05); margin-top: 50px; ">
+                                <li><a class="dropdown-item fw-semibold" href="./pages/faq.html"
+                                        style="font-weight: 500;">
+                                        FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2 dropdown">
+                            <a class="nav-link active d-hover" class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">portfolio<i
+                                    class="bi bi-caret-down-fill" style="font-size: 14px; margin-left: 10px ;"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-color: #ffffff; border: none; border-radius: 0px; min-width: 235px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05); margin-top: 50px; ">
+                                <li><a class="dropdown-item fw-semibold" href="./pages/protfoilo.html"
+                                        style="font-weight: 500;">portfolio
+                                        grid</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2 dropdown">
+                            <a class="nav-link active d-hover" class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">blog<i
+                                    class="bi bi-caret-down-fill" style="font-size: 14px; margin-left: 10px ;"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-color: #ffffff; border: none; border-radius: 0px; min-width: 235px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05); margin-top: 50px; ">
+                                <li><a class="dropdown-item fw-semibold" href="./pages/blog.html"
+                                        style="font-weight: 500;">Blog
+                                        Grid</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2 dropdown">
+                            <a class="nav-link active d-hover" class="nav-link dropdown-toggle" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" href="#">shop<i
+                                    class="bi bi-caret-down-fill" style="font-size: 14px; margin-left: 10px ;"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                style="background-color: #ffffff; border: none; border-radius: 0px; min-width: 235px; box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05); margin-top: 50px; ">
+                                <li><a class="dropdown-item fw-semibold" href="./pages/shop.html"
+                                        style="font-weight: 500;">Shop
+                                        Grid</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active d-hover" aria-current="page"
+                                href="./pages/contact.html">contact</a>
+                        </li>
+                        <ul class="d-flex  gap-4 align-items-center" style="margin-left: 295px; margin-right: 20px;">
+                            <li style="list-style: none;">
+                                <a href="#"><i class="bi bi-search" style="color: black;"></i></a>
+                            </li>
+                            <li style="list-style: none;">
+                                <a href="#"><i class="bi bi-basket2-fill" style="color: black;"></i></a>
+                            </li>
+                            <li style="list-style: none;">
+                                <a href="#"><i class="bi bi-person-circle" style="color: black;"></i></a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <form class="d-flex align-items-center gap-2" role="search" style=" margin-left: 30px;">
+                        <a href="./pages/contact.html" class="btn btn-primary fw-semibold py-3 px-5"
+                            type="submit">Consultations<i class="bi bi-chevron-double-right"
+                                style="font-size: 12px; margin-left: 10px ;"></i>
+                        </a>
+                    </form>
+                    </form>
+                    <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                        <i class="bi bi-grid-3x3-gap-fill"
+                            style="margin-left: 50px; font-size: 28px; color: black;"></i>
+                    </a>
+                </div>
+        </nav>
+        <div class="offcanvas offcanvas-end p-5" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel" style="background-color: #1A2429; overflow-y: hidden;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                <button type="button" class="btn-close text-white bg-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close" style="color: white;"></button>
+            </div>
+            <div class="offcanvas-body" style="overflow: hidden;">
+                <div>
+                    <h2 class="text-center text-white mb-5">Get Appointment</h2>
+                </div>
+                <form action="" method="">
+                    <input type="text" name="" id="" placeholder="Name" class="w-100 p-2 mb-3"
+                        style="outline: none; border: 1px solid #313A3F; background-color: #1A2429; border-radius: 5px;">
+                    <input type="text" name="" id="" placeholder="Email Address" class="w-100 p-2 mb-3"
+                        style="outline: none; border: 1px solid #313A3F; background-color: #1A2429; border-radius: 5px;">
+                    <input placeholder="Message" class="w-100 pt-2 px-2 mb-4"
+                        style="outline: none; border: 1px solid #313A3F; background-color: #1A2429;  border-radius: 5px; padding-bottom: 100px;">
+                    <button class="btn btn-primary fw-semibold py-3 w-100" type="submit">
+                        submit
+                    </button>
+                </form>
+                <div class="d-flex justify-content-center mt-5 gap-5">
+                    <i class="fa-brands fa-twitter" style="color: #BCBCBC;"></i>
+                    <i class="fa-brands fa-facebook-f" style="color: #BCBCBC;"></i>
+                    <i class="fa-brands fa-instagram" style="color: #BCBCBC;"></i>
+                    <i class="fa-brands fa-pinterest-p" style="color: #BCBCBC;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- banner -->
+        <section style="background-color: #F3F3F3;">
+            <div class="banner postion-releative top-0 end-0;" style=" position: relative; z-index: 1;">
+                <img src="assets/img/logo/slider-bg-leaf.png" class="d-block"
+                    style="position: absolute; top: -20%; z-index: -1; right: 20%;">
+                <div class="container">
+                    <div class="row">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="d-flex align-items-center pt-5">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 d-lg-none col-xl-6  d-xl-block  col-xxl-6 d-xxl-block"
+                                            style="padding-bottom: 55px;">
+                                            <img src="assets/img/banner/slider-image2.png" alt="">
+                                            <img src="assets/img/banner/organic.png" alt=""
+                                                style=" position: absolute; top: 10%; left: 30%; width: 13%;">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
+                                            <div class="position-absolute top-0 end-0">
+                                                <img src="assets/img/banner/pumpkin.png" alt="">
+                                            </div>
+                                            <div class="position-absolute" style="top: 50px; left: 50%;">
+                                                <img src="assets/img/banner/leaf-2.png" alt="">
+                                            </div>
+                                            <div class="heading">
+                                                <h3>Welcome To Munfirm</h3>
+                                                <h1 class="fw-semibold">Organic Foods <br>& Vegetables</h1>
+                                                <p class="fw-semibold my-4">25 Years of experience in agriculture
+                                                    farming</p>
+                                            </div>
+                                            <div class="d-flex gap-3">
+                                                <a href="./pages/shop.html"
+                                                    class="btn btn-secondary py-3 px-4 fw-bold">Shop Now<i
+                                                        class="bi bi-chevron-double-right"
+                                                        style="font-size: 13px; font-weight: 800; margin-left: 10px ;"></i>
+                                                </a>
+                                                <a href="./pages/shop.html"
+                                                    class="btn btn-secondary py-3 px-4 fw-bold">Learn More<i
+                                                        class="bi bi-chevron-double-right"
+                                                        style="font-size: 13px; font-weight: 800; margin-left: 10px ;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center pt-5">
+                                        <div class="col-6">
+                                            <div class="position-absolute top-0 start-0">
+                                                <img src="assets/img/banner/pumpkin.png" alt="">
+                                            </div>
+                                            <img src="assets/img/banner/leaf-2.png" alt=""
+                                                style="position: absolute; left: 35%; top: 10%;">
+                                            <div class="heading">
+                                                <h3>Welcome To Munfirm</h3>
+                                                <h1 class="fw-semibold">Organic Foods <br>& Vegetables</h1>
+                                                <p class="fw-semibold my-4">25 Years of experience in agriculture
+                                                    farming</p>
+                                            </div>
+                                            <div class="d-flex gap-3">
+                                                <a href="#" class="btn btn-secondary py-3 px-4 fw-bold">Shop Now<i
+                                                        class="bi bi-chevron-double-right"
+                                                        style="font-size: 13px; font-weight: 800; margin-left: 10px ;"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-secondary py-3 px-4 fw-bold">Learn More<i
+                                                        class="bi bi-chevron-double-right"
+                                                        style="font-size: 13px; font-weight: 800; margin-left: 10px ;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-6" style="padding-bottom: 100px;">
+                                            <img src="assets/img/banner/slider-image1.png" alt="">
+                                            <img src="assets/img/banner/organic.png" alt=""
+                                                style=" position: absolute; top: 5%; width: 13%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                                        class="bi bi-chevron-left" style="font-size: 20px; color: #77a713;"></i></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"><i
+                                        class="bi bi-chevron-right" style="font-size: 20px; color: #77a713;"></i></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-absolute end-0 bottom-0 ">
+                    <img src="assets/img/banner/slider-bg-shape.png" alt="">
+                    <img src="assets/img/banner/two-lear.png" alt=""
+                        style="right: 50px; bottom: 50px; position: absolute; z-index: 1;">
+                    <img src="assets/img/banner/leaf-2.png" alt="" style="left: -100%; bottom: 40%; position: absolute">
+                    <img src="assets/img/banner/half-leaf.png" alt=""
+                        style="left: -80%; bottom: 0%; position: absolute">
+                </div>
+            </div>
+        </section>
+        <!-- popular food -->
+        <section>
+            <div class="container pt-100 pb-100">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="title">
+                            <h3>Popular Foods And Vegetables</h3>
+                            <p class="fw-semibold">Quality Fruits & Vegetables</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="title" style="margin-left:90px;">
+                            <span class="my-4">On the other hand we denounce with righteou indignation and <br> dislike
+                                men who are so beguiled and demoralized by the charms<br> of pleasure of the moment so
+                                blinded by desire</span>
+                        </div>
+                    </div>
+                    <div class="col-2 pt-5" style="transform: matrix(1, -0.04, 0, 1, 1, 1); margin-right: 30px;">
+                        <div class="food-item text-center"
+                            style="border: 1px solid rgba(118, 167, 19, 0.15); padding: 20px;">
+                            <div class="food">
+                                <img src="assets/img/icon/icon1.png" alt="">
+                            </div>
+                            <a href="#"
+                                style="font-weight: 600; font-size: 20px; margin: 20px 0px; display: inline-block;">Organic
+                                Fruits</a>
+                            <img src="assets/img/icon/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-2 pt-5" style="transform: matrix(1, 0.04, 0, 1, 1, 1); margin-right: 30px;">
+                        <div class="food-item text-center"
+                            style="border: 1px solid rgba(118, 167, 19, 0.15); padding: 20px;">
+                            <div class="food">
+                                <img src="assets/img/icon/icon2.png" alt="">
+                            </div>
+                            <a href="#"
+                                style="font-weight: 600; font-size: 20px; margin: 20px 0px; display: inline-block;">Vegetables</a>
+                            <img src="assets/img/icon/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-2 pt-5" style="transform: matrix(1, -0.04, 0, 1, 1, 1); margin-right: 30px;">
+                        <div class="food-item text-center"
+                            style="border: 1px solid rgba(118, 167, 19, 0.15); padding: 20px;">
+                            <div class="food">
+                                <img src="assets/img/icon/icon3.png" alt="">
+                            </div>
+                            <a href="#"
+                                style="font-weight: 600; font-size: 20px; margin: 20px 10px; display: inline-block;">Sea
+                                Fish’s
+                            </a>
+                            <img src="assets/img/icon/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-2 pt-5" style="transform: matrix(1, 0.04, 0, 1, 1, 1); margin-right: 30px;">
+                        <div class="food-item text-center"
+                            style="border: 1px solid rgba(118, 167, 19, 0.15); padding: 20px;">
+                            <div class="food">
+                                <img src="assets/img/icon/icon4.png" alt="">
+                            </div>
+                            <a href="#"
+                                style="font-weight: 600; font-size: 20px; margin: 20px 0px; display: inline-block;">Crisp
+                                Bakery</a>
+                            <img src="assets/img/icon/arrow.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-2 pt-5" style="transform: matrix(1, -0.04, 0, 1, 1, 1); margin-right: 30px;">
+                        <div class="food-item text-center"
+                            style="border: 1px solid rgba(118, 167, 19, 0.15); padding: 20px;">
+                            <div class="food">
+                                <img src="assets/img/icon/icon5.png" alt="">
+                            </div>
+                            <a href="#"
+                                style="font-weight: 600; font-size: 20px; margin: 20px 0px; display: inline-block;">Chiken
+                                Egg</a>
+                            <img src="assets/img/icon/arrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="position-relative">
+                            <div class="d-flex">
+                                <div class="col-6">
+                                    <img src="assets/img/icon/about1.jpg" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="col-6">
+                                    <img src="assets/img/icon/about2.jpg" alt="">
+                                    <img src="assets/img/icon/about3.jpg" alt="" style="margin-top: 20px;">
+                                </div>
+                            </div>
+                            <img src="assets/img/banner/organic.png" alt="" class="position-absolute"
+                                style="top: 50%; left: 50%; transform: translate(-50%);">
+                        </div>
+                    </div>
+                    <div class="col-6" style="padding-right: 100px;">
+                        <div class="title">
+                            <h3>About Company</h3>
+                            <p class="fw-semibold">Organic & Helathy Foods Provider Farming</p>
+                        </div>
+                        <div class="d-flex" style="margin-bottom: 30px;">
+                            <h4 style="margin-right: 25%; font-weight: 600;">Agriculture <br> & Foods</h4>
+                            <h4 style="font-weight: 600;">Vegetables <br> & Fruits</h4>
+                        </div>
+                        <div style="width: 250px; height: 1px ;background-color: #77a713;"></div>
+                        <hr style="margin-top: -1px;">
+                        <p>On the other hand we denounce with righteous indignation and dislike men who are beguiled and
+                            demoralized by the charms of pleasure of the moment so blinded by desire, that they cannot
+                            foresee the pain</p>
+                        <div class="d-flex align-items-center justify-content-between"
+                            style="padding-right: 50px; padding-top: 10px;">
+                            <img src="assets/img/icon/author.jpg" alt="">
+                            <div class="mt-2">
+                                <h4>Michael D. Foreman</h4>
+                                <p>CEO & Founder</p>
+                            </div>
+                            <img src="assets/img/icon/signature.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- shop now -->
+        <section class="pt-100 pb-100">
+            <div class="container-fluid" style="padding: 0px 70px;">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="shop position-relative p-5 pt-100"
+                            style="background-color: #F5F9F0; padding: 60px;">
+                            <img src="assets/img/shop/offer-baner-bg1.png" class="position-absolute bottom-0 end-0">
+                            <img src="assets/img/shop/offer-banner1.png" class="position-absolute"
+                                style="bottom: 39px; right: 40px;">
+                            <div class="shop-content">
+                                <p style="font-family: Shadows Into Light; font-size: 30px; color: #77a713;">35% Off
+                                    Foods</p>
+                                <p class="fw-semibold fs-4" style="margin-top: -20px;">Organic Vegetables</p>
+                                <p>Best Foods For Your Family</p>
+                                <a href="./pages/shop.html" class="btn btn-secondary py-2 px-4 fw-bold">Shop Now<i
+                                        class="bi bi-chevron-double-right"
+                                        style="font-size: 13px; font-weight: 800; margin-left: 10px ;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="shop position-relative p-5 pt-100"
+                            style="background-color: #FFF6EF; padding: 60px;">
+                            <img src="assets/img/shop/offer-baner-bg2.png" class="position-absolute bottom-0 end-0">
+                            <img src="assets/img/shop/offer-banner2.png" class="position-absolute"
+                                style="bottom: 39px; right: 40px;">
+                            <div class="shop-content">
+                                <p style="font-family: Shadows Into Light; font-size: 30px; color: #ff7a07;">35% Off
+                                    Foods</p>
+                                <p class="fw-semibold fs-4" style="margin-top: -20px;">Organic Vegetables</p>
+                                <p>Best Foods For Your Family</p>
+                                <a href="./pages/shop.html" class="btn btn-secondary py-2 px-4 fw-bold">Shop Now<i
+                                        class="bi bi-chevron-double-right"
+                                        style="font-size: 13px; font-weight: 800; margin-left: 10px ;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="shop position-relative p-5 pt-100"
+                            style="background-color: #F5F9F0; padding: 60px;">
+                            <img src="assets/img/shop/offer-baner-bg3.png" class="position-absolute bottom-0 end-0">
+                            <img src="assets/img/shop/offer-banner2.png" class="position-absolute"
+                                style="bottom: 39px; right: 40px;">
+                            <div class="shop-content">
+                                <p style="font-family: Shadows Into Light; font-size: 30px; color: #237200;">35% Off
+                                    Foods</p>
+                                <p class="fw-semibold fs-4" style="margin-top: -20px;">Organic Vegetables</p>
+                                <p>Best Foods For Your Family</p>
+                                <a href="./pages/shop.html" class="btn btn-secondary py-2 px-4 fw-bold">Shop Now<i
+                                        class="bi bi-chevron-double-right"
+                                        style="font-size: 13px; font-weight: 800; margin-left: 10px ;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Vegetables -->
+        <section class="">
+            <div class="container-fluid " style="padding: 0px 55px">
+                <div class="row">
+                    <div class="title text-center">
+                        <h3>Popular Foods And Vegetables</h3>
+                        <p class="fw-semibold">Quality Fruits & Vegetables</p>
+                    </div>
+                    <div class="swiper slider1 pt-5">
+                        <div class="swiper-wrapper" style="height: 500px; margin-top: 60px;">
+                            <div class="swiper-slide pe-4">
+                                <div style="background-color: #F5F9EE; height: 376px; padding: 20px 20px;  width: 419px;"
+                                    class="text-center">
+                                    <img src="assets/img/shop/product2.png"
+                                        style="display: inline-block; margin: 0px auto;">
+                                    <div class=""
+                                        style="color: #FF7800; padding-top: 20px; padding-bottom: 10px; margin-top: 25px;">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <a href="#" style="font-weight: 600; font-size: 22px;">Fresh Carrots</a>
+                                    <div style="margin-top: 10px;font-weight: 600;">
+                                        <span style="color: #77a713; margin-left: 5px;">$49.98</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pe-4">
+                                <div style="background-color: #F5F9EE; height: 376px; padding: 20px 20px;"
+                                    class="text-center">
+                                    <div style="text-align: start;">
+                                        <a href="#" class="fw-bold"
+                                            style="background-color: #E92425; color: #fff; padding: 3px 15px; border-radius: 5px; margin: -20px 0px 0px 0px;">SALE</a>
+                                    </div>
+                                    <img src="assets/img/shop/product3.png"
+                                        style="display: inline-block; margin: 0px auto;">
+                                    <div class="" style="color: #FF7800; padding-top: 20px; padding-bottom: 10px;">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <a href="#" style="font-weight: 600; font-size: 22px;">Organic Brocolli</a>
+                                    <div style="margin-top: 10px;font-weight: 600;">
+                                        <del style="color: #B1B1B1;">$25</del>
+                                        <span style="color: #77a713; margin-left: 5px;">$18</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pe-4">
+                                <div style="background-color: #F5F9EE; padding: 20px 20px; height: 376px;"
+                                    class="text-center">
+                                    <div style="text-align: start;">
+                                        <a href="#" class="fw-bold"
+                                            style="background-color: #FF7800; color: #fff; padding: 3px 15px; border-radius: 5px; margin: -20px 0px 0px 0px;">20
+                                            OFF</a>
+                                    </div>
+                                    <img src="assets/img/shop/product4.png"
+                                        style="display: inline-block; margin: 0px auto;">
+                                    <div class=""
+                                        style="color: #FF7800; padding-top: 20px; padding-bottom: 10px; margin-top: 20px;">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <a href="#" style="font-weight: 600; font-size: 22px;">Chiken Egg</a>
+                                    <div style="margin-top: 10px;font-weight: 600;">
+                                        <del style="color: #B1B1B1;">$55</del>
+                                        <span style="color: #77a713; margin-left: 5px;">$36</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pe-4">
+                                <div style="background-color: #F5F9EE; height: 376px;  padding: 20px 20px;"
+                                    class="text-center">
+                                    <img src="assets/img/shop/product5.png"
+                                        style="display: inline-block; margin: 0px auto;">
+                                    <div class=""
+                                        style="color: #FF7800; padding-top: 20px; padding-bottom: 10px; margin-top: 50px;">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <a href="#" style="font-weight: 600; font-size: 22px;">Organic Brocolli</a>
+                                    <div style="margin-top: 10px;font-weight: 600;">
+                                        <del style="color: #B1B1B1;">$25</del>
+                                        <span style="color: #77a713; margin-left: 5px;">$18</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pe-4">
+                                <div style="background-color: #F5F9EE; height: 376px;  padding: 20px 20px;"
+                                    class="text-center">
+                                    <div style="text-align: start;">
+                                        <a href="#" class="fw-bold"
+                                            style="background-color: #FF7800; color: #fff; padding: 3px 15px; border-radius: 5px; margin: -20px 0px 0px 0px;">20
+                                            OFF</a>
+                                    </div>
+                                    <img src="assets/img/shop/product6.png"
+                                        style="display: inline-block; margin: 0px auto;">
+                                    <div class=""
+                                        style="color: #FF7800; padding-top: 20px; padding-bottom: 10px; margin-top: 20px;">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <a href="#" style="font-weight: 600; font-size: 22px;">Organic Brocolli</a>
+                                    <div style="margin-top: 10px;font-weight: 600;">
+                                        <del style="color: #B1B1B1;">$25</del>
+                                        <span style="color: #77a713; margin-left: 5px;">$18</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pe-4">
+                                <div style="background-color: #F5F9EE; height: 376px;  padding: 20px 20px;"
+                                    class="text-center">
+                                    <div style="text-align: start;">
+                                        <a href="#" class="fw-bold"
+                                            style="background-color: #FF7800; color: #fff; padding: 3px 15px; border-radius: 5px; margin: -20px 0px 0px 0px;">20
+                                            OFF</a>
+                                    </div>
+                                    <img src="assets/img/shop/product7.png"
+                                        style="display: inline-block; margin: 0px auto;">
+                                    <div class=""
+                                        style="color: #FF7800; padding-top: 20px; padding-bottom: 10px; margin-top: 10px;">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <a href="#" style="font-weight: 600; font-size: 22px;">Organic Brocolli</a>
+                                    <div style="margin-top: 10px;font-weight: 600;">
+                                        <del style="color: #B1B1B1;">$25</del>
+                                        <span style="color: #77a713; margin-left: 5px;">$18</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- video -->
+        <section class="position-relative" style="z-index:1;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center position-relative">
+                            <img src="assets/img/video/video-bg.jpg"
+                                style="background-size: cover; background-position: center;">
+                            <div class="overlay position-absolute top-0 end-0 bottom-0"
+                                style="background-color: rgb(26, 36, 40, .5); width: 1170px; height: 500px; left: 65px;">
+                            </div>
+                            <div class="position-absolute"
+                                style="top: 40%; left: 50%; transform: translate(-50%, -50%);">
+                                <i class="fa-solid fa-leaf text-white" style="font-size: 45px;"></i>
+                                <p class="text-white" style="font-size: 70px; font-family: Shadows Into Light;"> Watch
+                                    Videos</p>
+                                <a href="#">
+                                    <i class="fa-solid fa-play"
+                                        style="font-size: 20px; color: #FF7800; background-color: #ffffff; padding: 20px 25px; border-radius: 50%;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="position-relative bg-color w-100" style="top: 50%; margin-top: -200px; z-index: -1;">
+            <div class="text-center">
+                <img src="assets/img/video/special-offer-bg.png" alt="">
+                <img src="assets/img/video/offer-left.png" alt="" class="position-absolute start-0" style="top: 25%;">
+                <img src="assets/img/video/munakoiso.png" class="position-absolute" style="top: 15%; right: 10%;">
+                <img src="assets/img/video/litchi.png" class="position-absolute" style="top: 70%; right: 25%;">
+                <img src="assets/img/video/offer-right.png" alt="" class="position-absolute end-0" style="top: 40%;">
+                <div style="margin-top: -20%;">
+                    <div class="title text-center" style="max-width: 600px; margin: auto;">
+                        <h3>35% Off For Fruits</h3>
+                        <p class="fw-semibold">Special Deal Of This Week</p>
+                        <span>On the other hand we denounce with righteous indignation and dislike men who are beguiled
+                            and demoralized by the charms</span>
+                    </div>
+                    <div>
+                        <ul class="count-down">
+                            <li>
+                                <span>19</span>
+                                days
+                            </li>
+                            <li>
+                                <span>12</span>
+                                Hours
+                            </li>
+                            <li>
+                                <span>42</span>
+                                Minutes
+                            </li>
+                            <li>
+                                <span>31</span>
+                                Seconds
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pb-100" style="padding-bottom: 200px;">
+                        <a class="btn btn-primary fw-semibold py-3 px-4" type="submit">Shop Now<i
+                                class="bi bi-chevron-double-right" style="font-size: 12px; margin-left: 10px ;"></i>
+                        </a>
+                        <a class="btn btn-secondary fw-semibold py-3 px-4" type="submit" style="margin-left: 20px;">Use
+                            Code<i class="bi bi-chevron-double-right" style="font-size: 12px; margin-left: 10px ;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="position-absolute" style="bottom: -8%; left: 50%; transform: translate(-50%);">
+                <img src="assets/img/video/download.jpeg" style="background-size: cover;background-position: center;">
+                <div class="overlay position-absolute top-0 start-0 end-0 bottom-0"
+                    style="background-color: rgb(26, 36, 40, .6);"></div>
+                <div class="position-absolute d-flex justify-content-between" style="top: 20%; left: 5%;">
+                    <div>
+                        <p class="text-white" style="font-family: Shadows Into Light; font-size: 30px;">Need any support
+                        </p>
+                        <span class="text-white" style="font-size: 30px; font-weight: 700;">Get Our Quality Foods</span>
+                    </div>
+                    <div>
+                        <button class="btn fw-semibold px-4 py-3"
+                            style="border: 1px solid #ffffff; color: #ffffff; margin-left: 200px; margin-top: 20px;"
+                            type="submit">Consultations<i class="bi bi-chevron-double-right"
+                                style="font-size: 12px ;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- gallary -->
+        <section>
+            <div class="container pt-100">
+                <div class="row">
+                    <div class="title" style="padding-top: 50px;">
+                        <h3>Popular Foods And Vegetables</h3>
+                        <p class="fw-semibold">Quality Fruits & Vegetables</p>
+                    </div>
+                    <div class="swiper slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid position-relative" style="padding: 70px 70px; margin-left: -30px;">
+                <div class="swiper slider2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide gallary-item delay-0-2s "
+                            style="width: 100%; display: inline-block; visibility: visible; position: relative;">
+                            <div class="gallary-item position-relative w-100"
+                                style="z-index: -2;  margin-bottom: 80px; visibility: visible;">
+                                <img src="assets/img/video/gallery1 (1).jpg" style="width: 375px; height: 436px;">
+                                <div class="gallary1 d-flex justify-content-between bg-white p-3"
+                                    style="position: absolute; z-index: 2; left: 42%; width: 355px;">
+                                    <div>
+                                        <h4>Organic Fruits Juice</h4>
+                                        <p>Fresh Food</p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="btn btn-secondary fw-semibold pb-3 px-4">
+                                            <i class="bi bi-arrow-right-short"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="margin-left: -30px;">
+                            <div class="gallary-item position-relative w-100"
+                                style="z-index: -2; margin-bottom: 80px; visibility: visible;">
+                                <img src="assets/img/video/gallery2.jpg" style="width: 565px; height: 436px;">
+                                <div class="gallary1 d-flex justify-content-between bg-white p-3"
+                                    style="position: absolute; z-index: 2; left: 65%; width: 355px;">
+                                    <div>
+                                        <h4>Organic Fruits Juice</h4>
+                                        <p>Fresh Food</p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="btn btn-secondary fw-semibold pb-3 px-4">
+                                            <i class="bi bi-arrow-right-short"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="margin-left: 160px;">
+                            <div class="gallary-item position-relative w-100"
+                                style="z-index: -2; width: 200px; margin-bottom: 80px; visibility: visible;">
+                                <img src="assets/img/video/gallery3.jpg" style="width: 375px; height: 436px;">
+                                <div class="gallary1 d-flex justify-content-between bg-white p-3"
+                                    style="position: absolute; z-index: 2; left: 42%; width: 355px;">
+                                    <div>
+                                        <h4>Organic Fruits Juice</h4>
+                                        <p>Fresh Food</p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="btn btn-secondary fw-semibold pb-3 px-4">
+                                            <i class="bi bi-arrow-right-short"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="margin-left: -30px; margin-right: 30px;">
+                            <div class="gallary-item position-relative w-100"
+                                style="z-index: -2; width: 200px; margin-bottom: 80px; visibility: visible;">
+                                <img src="assets/img/video/gallery4.jpg" style="width: 350px; height: 436px;">
+                                <div class="gallary1 d-flex justify-content-between bg-white p-3"
+                                    style="position: absolute; z-index: 2; left: 40%; width: 340px;">
+                                    <div>
+                                        <h4>Organic Fruits Juice</h4>
+                                        <p>Fresh Food</p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="btn btn-secondary fw-semibold pb-3 px-4">
+                                            <i class="bi bi-arrow-right-short"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide" style=" margin-left: -50px;">
+                            <div class="gallary-item position-relative w-100"
+                                style="z-index: -2; width: 200px; margin-bottom: 80px; visibility: visible;">
+                                <img src="assets/img/video/gallery2.jpg" style="width: 400px; height: 436px;">
+                                <div class="gallary1 d-flex justify-content-between bg-white p-3"
+                                    style="position: absolute; z-index: 2; left: 42%; width: 355px;">
+                                    <div>
+                                        <h4>Organic Fruits Juice</h4>
+                                        <p>Fresh Food</p>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="btn btn-secondary fw-semibold pb-3 px-4">
+                                            <i class="bi bi-arrow-right-short"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- reviwes -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6" style="padding-right: 100px;">
+                        <div class="title" style="padding-top: 50px;">
+                            <h3>Customer Reviews</h3>
+                            <p class="fw-semibold pb-3">Valuable Customer’s <br> Feedback (Reviews)</p>
+                        </div>
+                        <hr class="w-100 mb-5">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                    class="active  " aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner mb-3">
+                                <div class="carousel-item active">
+                                    <p style="font-size: 24px; margin-left: 10px;"><i class="fa-solid fa-quote-left"
+                                            style="color: #76a713; margin-top: -20px; margin-left: 10px;"></i>Suspendisse
+                                        ultrices gravid aisuscom viverra maecenas accumsan facilisis Sit amet elitt
+                                        adipiscing eiusmod tempor incididunt labore et dolore magna aliqua euis ipsum<i
+                                            class="fa-solid fa-quote-right"
+                                            style="color: #76a713; margin-top: -20px; margin-left: 20px;"></i></p>
+                                    <div class="d-flex align-items-center justify-content-between"
+                                        style="padding-right: 50px; padding-top: 10px;">
+                                        <img src="assets/img/icon/author.jpg" alt="" style="width: 55px; height: 55px;">
+                                        <div class="mt-2" style="margin-left: -90px;">
+                                            <h4>Michael D. Foreman</h4>
+                                            <p style="color: #FF7800;">CEO & Founder</p>
+                                        </div>
+                                        <div class="rating bg-white"
+                                            style="    box-shadow: 10px 0 60px rgba(34, 34, 34, 0.1);">
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-regular fa-star" style="color: #FF7800;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p style="font-size: 24px; margin-left: 10px;"><i class="fa-solid fa-quote-left"
+                                            style="color: #76a713; margin-top: -20px; margin-left: 10px;"></i>Suspendisse
+                                        ultrices gravid aisuscom viverra maecenas accumsan facilisis Sit amet elitt
+                                        adipiscing eiusmod tempor incididunt labore et dolore magna aliqua euis ipsum<i
+                                            class="fa-solid fa-quote-right"
+                                            style="color: #76a713; margin-top: -20px; margin-left: 20px;"></i></p>
+                                    <div class="d-flex align-items-center justify-content-between"
+                                        style="padding-right: 50px; padding-top: 10px;">
+                                        <img src="assets/img/icon/author.jpg" alt="" style="width: 55px; height: 55px;">
+                                        <div class="mt-2" style="margin-left: -90px;">
+                                            <h4>Michael D. Foreman</h4>
+                                            <p style="color: #FF7800;">CEO & Founder</p>
+                                        </div>
+                                        <div class="rating bg-white"
+                                            style="    box-shadow: 10px 0 60px rgba(34, 34, 34, 0.1);">
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-regular fa-star" style="color: #FF7800;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <p style="font-size: 24px; margin-left: 10px;"><i class="fa-solid fa-quote-left"
+                                            style="color: #76a713; margin-top: -20px; margin-left: 10px;"></i>Suspendisse
+                                        ultrices gravid aisuscom viverra maecenas accumsan facilisis Sit amet elitt
+                                        adipiscing eiusmod tempor incididunt labore et dolore magna aliqua euis ipsum<i
+                                            class="fa-solid fa-quote-right"
+                                            style="color: #76a713; margin-top: -20px; margin-left: 20px;"></i></p>
+                                    <div class="d-flex align-items-center justify-content-between"
+                                        style="padding-right: 50px; padding-top: 10px;">
+                                        <img src="assets/img/icon/author.jpg" alt="" style="width: 55px; height: 55px;">
+                                        <div class="mt-2" style="margin-left: -90px;">
+                                            <h4>Michael D. Foreman</h4>
+                                            <p style="color: #FF7800;">CEO & Founder</p>
+                                        </div>
+                                        <div class="rating bg-white"
+                                            style="    box-shadow: 10px 0 60px rgba(34, 34, 34, 0.1);">
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-solid fa-star" style="color: #FF7800;"></i>
+                                            <i class="fa-regular fa-star" style="color: #FF7800;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-6 position-relative pt-100" style="margin-top: 50px;">
+                        <div class="position-absolute">
+                            <img src="assets/img/review/feedback-right.jpg" alt="">
+                            <img src="assets/img/review/feedback-right.png" class="position-absolute"
+                                style="left: 50%; z-index: -1; top: -35%;">
+                            <img src="assets/img/review/feedback-bg.png" class="position-absolute"
+                                style="left: 100%; z-index: -2; top: -35%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="onion-img position-relative">
+                <img src="assets/img/review/onion.png" class="position-absolute" style="right: 10%;">
+            </div>
+        </section>
+        <!-- blog -->
+        <section class="position-relative">
+            <img src="assets/img/blog/two-lear.png" class="position-absolute" style="top: 30%; left: 5%;">
+            <img src="assets/img/blog/leaf-four (1).png" class="position-absolute" style="bottom: 0%; left: 10%;">
+            <img src="assets/img/blog/leaf-four.png" class="position-absolute" style="top: 20%; right: 0%;">
+            <img src="assets/img/blog/leaf-three.png" class="position-absolute" style="bottom: 10%; right: 10%;">
+            <div class="container pt-100">
+                <div class="title text-center" style="padding-top: 50px;">
+                    <h3>Read Article Tips</h3>
+                    <p class="fw-semibold pb-3">Latest News & Blog</p>
+                </div>
+                <div class="row pb-100">
+                    <div class="col-4">
+                        <div class="blog-img position-relative">
+                            <img src="assets/img/blog/news1.jpg" alt="">
+                            <span class="date" style="background-color: #ff7a07; position: absolute; bottom: -15%; right: 15%; padding: 20px;
+                            border-radius: 15px 35px 35px 35px; color: #ffffff; font-size: 18px;">
+                                <h6 class="fw-bold text-center mb-0" style="font-size: 20px;">25</h6>July
+                            </span>
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h3 style="padding-top: 30px;">Vegetable</h3>
+                                <span class="fw-semibold pb-3"><a href="#"
+                                        style="font-size: 22px; line-height: 1.5; display: block; margin-bottom: 20px;">Unicode
+                                        UTF8 Character Sets They Sltimate Guide Systems</a></span>
+                            </div>
+                            <a href="#" class="fw-bold" style="color: #666666;">Read More<i
+                                    class="bi bi-chevron-double-right" style="font-size: 12px; margin-left: 10px; color: #666666; font-weight: 800;
+                                "></i></a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="blog-img position-relative">
+                            <img src="assets/img/blog/news2.jpg" alt="">
+                            <span class="date" style="background-color: #ff7a07; position: absolute; bottom: -15%; right: 15%; padding: 20px;
+                            border-radius: 15px 35px 35px 35px; color: #ffffff; font-size: 18px;">
+                                <h6 class="fw-bold text-center mb-0" style="font-size: 20px;">25</h6>July
+                            </span>
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h3 style="padding-top: 30px;">Farming</h3>
+                                <span class="fw-semibold pb-3"><a href="#"
+                                        style="font-size: 22px; line-height: 1.5; display: block; margin-bottom: 20px;">Quality
+                                        Foods Requirments For Every Human Body’s
+                                    </a></span>
+                            </div>
+                            <a href="#" class="fw-bold" style="color: #666666;">Read More<i
+                                    class="bi bi-chevron-double-right" style="font-size: 12px; margin-left: 10px; color: #666666; font-weight: 800;
+                                "></i></a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="blog-img position-relative">
+                            <img src="assets/img/blog/news3.jpg" alt="">
+                            <span class="date" style="background-color: #ff7a07; position: absolute; bottom: -15%; right: 15%; padding: 20px;
+                            border-radius: 15px 35px 35px 35px; color: #ffffff; font-size: 18px;">
+                                <h6 class="fw-bold text-center mb-0" style="font-size: 20px;">25</h6>July
+                            </span>
+                        </div>
+                        <div class="content">
+                            <div class="title">
+                                <h3 style="padding-top: 30px;">Organic Fruits</h3>
+                                <span class="fw-semibold pb-3"><a href="#"
+                                        style="font-size: 22px; line-height: 1.5; display: block; margin-bottom: 20px;">Choose
+                                        Awesome Vegetables For Your Daily Life Routine</a></span>
+                            </div>
+                            <a href="#" class="fw-bold" style="color: #666666;">Read More<i
+                                    class="bi bi-chevron-double-right" style="font-size: 12px; margin-left: 10px; color: #666666; font-weight: 800;
+                                "></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- images -->
+        <section style="background-color: #77A713; position: relative; height: 200px; vertical-align: middle;">
+            <img src="assets/img/blog/bg1.png" style="position: absolute; bottom: 0%; left: 7%;">
+            <img src="assets/img/blog/bg2.png" style="position: absolute; top: 0%; left: 30%;">
+            <img src="assets/img/blog/bg3.png" style="position: absolute; top: -20%; left: 55%;">
+            <img src="assets/img/blog/bg4.png" style="position: absolute; right: 5%; top: 20%;">
+            <img src="assets/img/blog/bg5.png" style="position: absolute; right: 50%; bottom: 0px;">
+            <img src="assets/img/blog/bg6.png" style="position: absolute; right: 15%; bottom: 0px;">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="swiper slider3">
+                        <div class="swiper-wrapper" style="height: 200px; margin-top: 60px;">
+                            <div class="swiper-slide">
+                                <div class="col-2">
+                                    <img src="assets/img/blog/1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col-2">
+                                    <img src="assets/img/blog/4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col-2">
+                                    <img src="assets/img/blog/3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col-2">
+                                    <img src="assets/img/blog/4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col-2">
+                                    <img src="assets/img/blog/5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col-2">
+                                    <img src="assets/img/blog/2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col-2">
+                                    <img src="assets/img/blog/6.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color: #237200; padding-top: 100px; padding-bottom: 100px; position: relative;">
+        <div>
+            <img src="assets/img/footer/footer-bg-shape.png" style="position: absolute; top: 0%; left: 10%;" alt="">
+            <img src="assets/img/footer/footer1.png" style="position: absolute; top: 15%; left: 5%;" alt="">
+            <img src="assets/img/footer/footer3.png" style="position: absolute; top: 15%; right: 5%;" alt="">
+            <img src="assets/img/footer/footer2.png" style="position: absolute; bottom: 10%; left: 5%;" alt="">
+            <img src="assets/img/footer/footer4.png" style="position: absolute; bottom: 10%; right: 5%;" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="section-title d-flex justify-content-between align-items-center">
+                        <h1 class="fw-semibold text-white" style="font-size: 45px;">Newsletter Subscribe</h1>
+                        <form action="" method="">
+                            <input type="text" name="" id="" placeholder="Email Address" class="w-100 p-2 mb-3"
+                                style="background-color: transparent; border: none; outline: none;">
+                            <div class="border w-100"></div>
+                        </form>
+                        <button class="btn btn-primary fw-semibold py-3 px-5" type="submit"><a href="#"
+                                style="color: #ffffff;">subscribe now </a><i class="bi bi-chevron-double-right"
+                                style="font-size: 12px; margin-left: 10px ;"></i>
+                        </button>
+                    </div>
+                </div>
+                <hr class="w-100" style="margin-top: 100px; color: #ffffff;">
+                <div class="footer-menu d-flex" style="padding: top 100px;color: white;">
+                    <div class="col-2">
+                        <ul style="display: block; padding-top: 70px;">
+                            <h3 class="pb-4">Quick Links</h3>
+                            <li><a href="#" class="text-white my-3" style="display: block;">About Us</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Services</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Our Project</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Meet Farmers</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Latest News</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Vegetable</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <ul style="padding-top: 130px; display: block;">
+                            <li><a href="#" class="text-white my-3" style="display: block;">Documentation</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Elements</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Best Products</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Technology</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Contact Us</a></li>
+                            <li><a href="#" class="text-white my-3" style="display: block;">Setting & Privacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 text-center" style="padding-top: 70px;">
+                        <img src="assets/img/logo/logo.png" alt=""
+                            style=" padding: 15px 30px; border-radius: 10px; display: block; margin: 0% auto; background-color: #ffffff;">
+                        <p class="text-white pt-4">Sit amet consectetur adipiscing elit sed eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. quis ipsum suspendisse ultrices gravida.</p>
+                        <div class="d-flex justify-content-center gap-2 pt-4 pb-5 social-icon" style="color: white;">
+                            <i class="fa-brands fa-facebook-f"
+                                style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 50%;"></i>
+                            <i class="fa-brands fa-twitter"
+                                style="background: rgba(255, 255, 255, 0.15); padding: 20px; font-size: 12px; border-radius: 50%;"></i>
+                            <i class="fa-brands fa-linkedin-in"
+                                style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 50%;"></i>
+                            <i class="fa-brands fa-youtube"
+                                style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 50%;"></i>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <ul style="display: block; padding-top: 70px; padding-left: 80px;">
+                            <h3 class="pb-4">Contact Us</h3>
+                            <li class="my-3">Quis autem vel eum reprehenderit voluptate velit esse quamnue</li>
+                            <li class="my-3"><i class="me-2 fa-solid fa-location-dot"></i>53 Main Street, 2nd Mountain
+                                3rd Floor, New York</li>
+                            <li class="my-3"><i class="me-2 fa-solid fa-phone"></i>+012 (345) 678 99</li>
+                            <li class="my-3"><i class="me-2 fa-solid fa-envelope"></i>support@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="up-button">
+                <a href="#">
+                    <i class="bi bi-chevron-double-up" style="font-size:20px; color: #ffffff; margin-top: -100px; "></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.slider1', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 4,
+            autoplay: {
+                delay: 0,
+            },
+            speed: 2000,
+        });
+    </script>
+    <script>
+        const swiper2 = new Swiper('.slider2', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 4,
+            autoplay: {
+                delay: 0,
+            },
+            speed: 5000,
+        });
+    </script>
+    <script>
+        const swiper3 = new Swiper('.slider3', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 6,
+            autoplay: {
+                delay: 0,
+            },
+            speed: 2000,
+        });
+    </script>
+    <script>
+        //up-button
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $(".up-button").fadeIn();
+                }
+                else {
+                    $(".up-button").fadeOut();
+                }
+            });
+            //fixed header
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    $(".header").addClass("fixed-header");
+                }
+                else {
+                    $(".header").removeClass("fixed-header");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(window).on('load', function () {
+            $(".loader img").delay(500).fadeOut(1000);
+            $(".loader").delay(1000).fadeOut(1500);
+            setTimeout(function () {
+                $("body").removeClass("hidden");
+            }, 2500);
+        });
+    </script>
+    <script>
+        $("body").on("mousemove", function (n) {
+            a.css({ 'left': n.clientX + "px" });
+            a.css({ 'top': n.clientY + "px" });
+            b.css({ 'left': n.clientX + "px" });
+            b.css({ 'top': n.clientY + "px" });
+            c.css({ 'left': n.clientX + "px" });
+            c.css({ 'top': n.clientY + "px" });
+        });
+
+        var a = $("#cursor"),
+            b = $("#cursor2"),
+            c = $("#cursor3");
+
+        function n(t) {
+            b.addClass("hover");
+            c.addClass("hover");
+        }
+
+        function s(t) {
+            b.removeClass("hover");
+            c.removeClass("hover");
+        }
+
+        s();
+
+        $(".hover-target").on('mouseover', n);
+        $(".hover-target").on('mouseout', s);
+    </script>
+
+</body>
+
+</html>
